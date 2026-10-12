@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conecta UABC | Bienestar universitario</title>
+<meta name="description" content="Recursos para organizar tu tiempo, reducir el estrés académico y cuidar tu bienestar en la UABC.">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --crema: #faf8f2;
+  --blanco: #ffffff;
+  --terracota: #a6533f;
+  --salvia: #dce7d8;
+  --verde: #344f43;
+  --oscuro: #28312d;
+  --gris: #69746e;
+  --borde: #e5e2d8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--oscuro);
+  background: var(--crema);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.25;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; }
+
+.contenedor {
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 85px 0;
+  scroll-margin-top: 85px;
+}
+
+.encabezado-seccion {
+  max-width: 760px;
+  margin-bottom: 38px;
+}
+
+.etiqueta {
+  color: var(--terracota);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  margin: 12px 0 18px;
+}
+
+p { color: var(--gris); }
+
+header {
+  background: rgba(250,248,242,.97);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.barra {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--verde);
+  font-size: 19px;
+}
+
+.marca img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover { color: var(--terracota); }
+
+/* INICIO */
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 15%, #dce7d8 0, transparent 38%),
+    var(--crema);
+}
+
+.hero-contenido {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero h1 {
+  font-size: clamp(39px, 5vw, 65px);
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+
+.hero h1 span { color: var(--terracota); }
+
+.hero p {
+  font-size: 17px;
+  max-width: 570px;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 13px 23px;
+  background: var(--verde);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 1px solid var(--verde);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.boton:hover {
+  background: var(--terracota);
+  border-color: var(--terracota);
+}
+
+.boton-claro {
+  background: transparent;
+  color: var(--verde);
+}
+
+.hero-imagen {
+  background: var(--salvia);
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 18px 18px 0 #e9e3d6;
+}
+
+.hero-imagen img {
+  width: 280px;
+  max-height: 300px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.hero-imagen p {
+  color: var(--verde);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* TARJETAS */
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.tarjeta {
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 9px 25px rgba(0,0,0,.035);
+  transition: .2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.07);
+}
+
+.tarjeta h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.tarjeta p { margin-bottom: 0; }
+
+.icono {
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  background: var(--salvia);
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+}
+
+.fondo-verde { background: #edf2e9; }
+.fondo-blanco { background: white; }
+
+/* DATOS */
+
+.datos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.grafica {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--borde);
+}
+
+.grafica img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.numero {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(65px, 10vw, 110px);
+  font-weight: 800;
+  color: var(--terracota);
+  line-height: 1.1;
+}
+
+.barra-dato { margin-top: 20px; }
+
+.barra-dato .linea {
+  height: 13px;
+  border-radius: 20px;
+  background: #e9e9e3;
+  overflow: hidden;
+}
+
+.barra-dato .relleno {
+  height: 100%;
+  background: var(--terracota);
+  border-radius: 20px;
+}
+
+/* RECURSOS */
+
+.recurso-enlace {
+  display: inline-block;
+  color: var(--terracota);
+  font-weight: 800;
+  margin-top: 14px;
+  text-decoration: none;
+}
+
+.recurso-enlace:hover { text-decoration: underline; }
+
+.video {
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* TEMPORIZADOR */
+
+.herramienta {
+  background: var(--verde);
+  color: white;
+  border-radius: 24px;
+  padding: 38px;
+  text-align: center;
+}
+
+.herramienta p { color: #e3e9e3; }
+
+.reloj {
+  font-size: 65px;
+  font-weight: 800;
+  font-family: 'Manrope', sans-serif;
+  margin: 20px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.herramienta button {
+  background: var(--salvia);
+  color: var(--verde);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.herramienta button:hover { background: white; }
+
+/* MAPA CONCEPTUAL */
+
+.mapa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nodo {
+  padding: 17px 22px;
+  background: white;
+  border: 2px solid #cad8c7;
+  border-radius: 15px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.nodo.principal {
+  background: var(--verde);
+  color: white;
+}
+
+.flecha {
+  font-size: 26px;
+  color: var(--terracota);
+}
+
+/* REFERENCIAS */
+
+.referencias {
+  padding-left: 22px;
+  overflow-wrap: anywhere;
+}
+
+.referencias li { margin-bottom: 17px; }
+
+.referencias a { color: var(--terracota); }
+
+footer {
+  background: var(--verde);
+  color: white;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+footer p { color: #d9e5db; }
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-contenido,
+  .datos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cuadricula {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .barra { flex-direction: column; }
+  nav { justify-content: center; gap: 12px; }
+  nav a { font-size: 12px; }
+  section { padding: 60px 0; }
+  .cuadricula { grid-template-columns: 1fr; }
+  .hero-imagen { padding: 25px; }
+  .reloj { font-size: 50px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN -->
+<header>
+  <div class="barra">
+    <a href="#inicio" class="marca">
+      <img src="assets/cimarron.jpg" alt="Cimarrón">
+      <span>Conecta UABC</span>
+    </a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#problema">Problema</a>
+      <a href="#datos">Datos</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#apoyo">Apoyo</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- INICIO -->
+<section id="inicio" class="hero">
+  <div class="contenedor hero-contenido">
+
+    <div>
+      <span class="etiqueta">Bienestar y vida universitaria</span>
+
+      <h1>
+        Tu espacio para
+        <span>estar mejor.</span>
+      </h1>
+
+      <p>
+        La universidad es una etapa de descubrimientos,
+        aprendizajes y nuevos retos. Pero también puede
+        traer estrés, cansancio y dificultades para
+        organizar nuestro tiempo.
+      </p>
+
+      <p>
+        Conecta UABC es un espacio creado para compartir
+        información, recursos y herramientas que ayuden
+        a los estudiantes a encontrar un equilibrio entre
+        su vida académica y su bienestar personal.
+      </p>
+
+      <div class="botones">
+        <a class="boton" href="#recursos">Explorar recursos →</a>
+        <a class="boton boton-claro" href="#problema">
+          Conocer el problema
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-imagen">
+      <img src="assets/cimarron.jpg" alt="Cimarrón de la UABC">
+      <h3>Una comunidad que se apoya.</h3>
+      <p>Aprender también significa cuidarnos.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRESENTACIÓN -->
+<section id="presentacion" class="fondo-blanco">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Nuestro proyecto</span>
+      <h2>¿Qué es Conecta UABC?</h2>
+      <p>
+        Es una iniciativa informativa dirigida a estudiantes
+        universitarios que busca promover la organización
+        académica, el bienestar emocional y el acceso a
+        recursos de apoyo.
+      </p>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">🎯</div>
+        <h3>Objetivo</h3>
+        <p>
+          Ayudar a identificar dificultades relacionadas
+          con la vida universitaria y compartir alternativas
+          para enfrentarlas.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🤝</div>
+        <h3>Comunidad</h3>
+        <p>
+          Fomentar una cultura de acompañamiento,
+          respeto y comunicación entre estudiantes.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🌱</div>
+        <h3>Bienestar</h3>
+        <p>
+          Promover hábitos saludables que favorezcan
+          el aprendizaje y la calidad de vida.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">La realidad universitaria</span>
+      <h2>¿Cuál es el problema?</h2>
+      <p>
+        La combinación de tareas, exámenes, proyectos,
+        responsabilidades personales y falta de descanso
+        puede convertirse en una fuente importante de
+        estrés para los estudiantes.
+      </p>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">🧠</div>
+        <h3>Estrés académico</h3>
+        <p>
+          Puede aparecer cuando las exigencias escolares
+          parecen superar los recursos disponibles para
+          responder a ellas. Puede dificultar el descanso,
+          la concentración y la motivación.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">💭</div>
+        <h3>Ansiedad</h3>
+        <p>
+          La preocupación constante por calificaciones,
+          entregas o resultados puede generar tensión
+          y afectar la experiencia universitaria.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📅</div>
+        <h3>Mala organización</h3>
+        <p>
+          No planificar actividades puede provocar
+          acumulación de tareas, entregas de último
+          momento y menos tiempo para descansar.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🌙</div>
+        <h3>Falta de descanso</h3>
+        <p>
+          Dormir poco o mantener horarios irregulares
+          puede perjudicar la atención, el estado de
+          ánimo y el rendimiento académico.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📚</div>
+        <h3>Sobrecarga de tareas</h3>
+        <p>
+          Cuando coinciden varias actividades y fechas
+          de entrega, puede resultar difícil equilibrar
+          la escuela con otras responsabilidades.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">⚖️</div>
+        <h3>Desequilibrio personal</h3>
+        <p>
+          Dedicar todo el tiempo al estudio puede reducir
+          las oportunidades de convivir, hacer ejercicio,
+          practicar pasatiempos o descansar.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DATOS -->
+<section id="datos" class="fondo-verde">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Resultados de la encuesta</span>
+      <h2>¿Qué dicen los estudiantes?</h2>
+      <p>
+        Esta gráfica muestra la frecuencia con la que
+        los participantes reportaron sobrecarga de
+        tareas y trabajos escolares.
+      </p>
+    </div>
+
+    <div class="datos-grid">
+      <div class="grafica">
+        <img
+          src="assets/encuesta.jpg"
+          alt="Gráfica: Nunca 3%, Rara vez 3%, Algunas veces 15%, Casi siempre 44% y Siempre 35%">
+      </div>
+
+      <div>
+        <div class="numero">79%</div>
+        <h3>Reporta sobrecarga frecuente</h3>
+        <p>
+          El 44% respondió "Casi siempre" y el 35%
+          respondió "Siempre". En conjunto, representan
+          el 79% de las respuestas de la gráfica.
+        </p>
+
+        <div class="barra-dato">
+          <strong>Casi siempre — 44%</strong>
+          <div class="linea">
+            <div class="relleno" style="width:44%"></div>
+          </div>
+        </div>
+
+        <div class="barra-dato">
+          <strong>Siempre — 35%</strong>
+          <div class="linea">
+            <div class="relleno" style="width:35%"></div>
+          </div>
+        </div>
+
+        <p>
+          <small>
+            Fuente: gráfica de encuesta proporcionada
+            para el proyecto Conecta UABC. Los resultados
+            describen a los participantes de esta encuesta
+            y no representan necesariamente a toda la UABC.
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOMENDACIONES -->
+<section id="recomendaciones">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Pequeños cambios</span>
+      <h2>¿Cómo podemos mejorar nuestro bienestar?</h2>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">✍️</div>
+        <h3>Planifica tus actividades</h3>
+        <p>
+          Anota tareas, fechas de entrega y exámenes.
+          Divide los proyectos grandes en pasos pequeños.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">⏳</div>
+        <h3>Estudia por intervalos</h3>
+        <p>
+          Prueba sesiones de concentración de 25 minutos
+          y descansos de 5 minutos. Ajusta el método
+          según tus necesidades.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🚶</div>
+        <h3>Mantente activo</h3>
+        <p>
+          Caminar, practicar deporte o realizar actividades
+          recreativas puede ayudarte a despejarte.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">💤</div>
+        <h3>Cuida tu sueño</h3>
+        <p>
+          Procura horarios regulares de descanso
+          y evita dejar todas las tareas para la noche.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🗣️</div>
+        <h3>Habla con alguien</h3>
+        <p>
+          Compartir tus preocupaciones con personas
+          de confianza puede ayudarte a encontrar apoyo.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">💚</div>
+        <h3>Busca orientación</h3>
+        <p>
+          Cuando el malestar persiste o afecta tu vida
+          diaria, es importante acudir a profesionales
+          o servicios universitarios de apoyo.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RECURSOS -->
+<section id="recursos" class="fondo-blanco">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Material educativo</span>
+      <h2>Recursos para aprender más</h2>
+      <p>
+        Explora materiales que pueden ayudarte
+        a comprender el estrés académico y encontrar
+        estrategias para manejarlo.
+      </p>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">📊</div>
+        <h3>Infografía</h3>
+        <p>
+          Material sobre el manejo del estrés académico,
+          sus causas y algunas estrategias de afrontamiento.
+        </p>
+        <a class="recurso-enlace"
+          href="https://www.studocu.com/es-mx/document/instituto-mexico-de-ciudad-juarez/psicologia-social/infografia-manejo-del-estres-academico-es/150590004"
+          target="_blank" rel="noopener noreferrer">
+          Consultar infografía ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🎬</div>
+        <h3>Video educativo</h3>
+        <p>
+          Recurso audiovisual compartido para complementar
+          la información del proyecto.
+        </p>
+        <a class="recurso-enlace"
+          href="https://youtu.be/ErwsvIqoRyI"
+          target="_blank" rel="noopener noreferrer">
+          Ver en YouTube ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🌍</div>
+        <h3>Organización Mundial de la Salud</h3>
+        <p>
+          Información general sobre qué es el estrés
+          y recomendaciones para afrontarlo.
+        </p>
+        <a class="recurso-enlace"
+          href="https://www.who.int/es/news-room/questions-and-answers/item/stress"
+          target="_blank" rel="noopener noreferrer">
+          Consultar la OMS ↗
+        </a>
+      </article>
+    </div>
+
+    <div style="margin-top:40px">
+      <h3>Video para estudiantes</h3>
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/ErwsvIqoRyI"
+          title="Video educativo sobre bienestar"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p>
+        Si el video no se reproduce aquí,
+        utiliza el enlace de YouTube de arriba.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA CONCEPTUAL -->
+<section id="mapa" class="fondo-verde">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Mapa conceptual</span>
+      <h2>El equilibrio universitario</h2>
+      <p>
+        El bienestar académico está relacionado
+        con diferentes aspectos de nuestra vida.
+      </p>
+    </div>
+
+    <div class="mapa">
+      <div class="nodo">Organización</div>
+      <span class="flecha">→</span>
+      <div class="nodo">Descanso</div>
+      <span class="flecha">→</span>
+      <div class="nodo principal">Bienestar</div>
+      <span class="flecha">←</span>
+      <div class="nodo">Apoyo social</div>
+      <span class="flecha">←</span>
+      <div class="nodo">Hábitos saludables</div>
+    </div>
+  </div>
+</section>
+
+<!-- HERRAMIENTAS -->
+<section id="herramientas">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Organiza tu día</span>
+      <h2>Herramientas para estudiantes</h2>
+      <p>
+        Utiliza estas plataformas para organizar
+        actividades, guardar documentos y trabajar
+        con tus compañeros.
+      </p>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">📆</div>
+        <h3>Google Calendar</h3>
+        <p>Organiza exámenes, clases y fechas de entrega.</p>
+        <a class="recurso-enlace"
+          href="https://calendar.google.com"
+          target="_blank" rel="noopener noreferrer">
+          Abrir Calendar ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📁</div>
+        <h3>Google Drive</h3>
+        <p>Guarda y comparte tus archivos académicos.</p>
+        <a class="recurso-enlace"
+          href="https://drive.google.com"
+          target="_blank" rel="noopener noreferrer">
+          Abrir Drive ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">💻</div>
+        <h3>Blackboard</h3>
+        <p>
+          Plataforma educativa para consultar
+          actividades y materiales de clase.
+        </p>
+        <a class="recurso-enlace"
+          href="https://uabc.blackboard.com"
+          target="_blank" rel="noopener noreferrer">
+          Abrir Blackboard ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📹</div>
+        <h3>Google Meet</h3>
+        <p>
+          Realiza reuniones virtuales
+          y sesiones de estudio en equipo.
+        </p>
+        <a class="recurso-enlace"
+          href="https://meet.google.com"
+          target="_blank" rel="noopener noreferrer">
+          Abrir Meet ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📝</div>
+        <h3>Google Docs</h3>
+        <p>
+          Crea documentos y trabaja de manera
+          colaborativa.
+        </p>
+        <a class="recurso-enlace"
+          href="https://docs.google.com"
+          target="_blank" rel="noopener noreferrer">
+          Abrir Docs ↗
+        </a>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">📖</div>
+        <h3>Google Académico</h3>
+        <p>
+          Busca artículos, investigaciones
+          y publicaciones académicas.
+        </p>
+        <a class="recurso-enlace"
+          href="https://scholar.google.com"
+          target="_blank" rel="noopener noreferrer">
+          Buscar información ↗
+        </a>
+      </article>
+    </div>
+
+    <div style="margin-top:45px" class="herramienta">
+      <h2>Temporizador de estudio</h2>
+      <p>
+        Prueba 25 minutos de concentración
+        y después toma un descanso de 5 minutos.
+      </p>
+
+      <div id="reloj" class="reloj" role="timer">25:00</div>
+
+      <button onclick="iniciar()">Iniciar</button>
+      <button onclick="pausar()">Pausar</button>
+      <button onclick="reiniciar()">Reiniciar</button>
+      <button onclick="descanso()">Descanso de 5 min</button>
+
+      <p id="estado">Listo para comenzar</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS UABC -->
+<section id="apoyo" class="fondo-verde">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">No tienes que hacerlo solo</span>
+      <h2>Servicios de apoyo UABC</h2>
+      <p>
+        La universidad cuenta con programas y espacios
+        de orientación. La disponibilidad de servicios
+        puede variar según el campus y la unidad académica.
+      </p>
+    </div>
+
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="icono">💬</div>
+        <h3>Orientación psicológica</h3>
+        <p>
+          Consulta las opciones de orientación
+          y acompañamiento disponibles para estudiantes.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🎓</div>
+        <h3>Tutorías académicas</h3>
+        <p>
+          Busca orientación con tu tutor o
+          coordinación académica para resolver
+          dificultades relacionadas con tus estudios.
+        </p>
+      </article>
+
+      <article class="tarjeta">
+        <div class="icono">🧭</div>
+        <h3>Orientación educativa</h3>
+        <p>
+          Solicita información sobre hábitos
+          de estudio, adaptación universitaria
+          y recursos institucionales.
+        </p>
+      </article>
+    </div>
+
+    <div class="botones">
+      <a class="boton"
+        href="https://bienestar.uabc.mx/directorioOrientadores/tijuana"
+        target="_blank" rel="noopener noreferrer">
+        Directorio de orientación UABC ↗
+      </a>
+
+      <a class="boton boton-claro"
+        href="https://www.uabc.mx"
+        target="_blank" rel="noopener noreferrer">
+        Sitio oficial UABC ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCIAS -->
+<section id="referencias" class="fondo-blanco">
+  <div class="contenedor">
+    <div class="encabezado-seccion">
+      <span class="etiqueta">Fuentes consultadas</span>
+      <h2>Referencias</h2>
+      <p>
+        Fuentes institucionales y recursos utilizados
+        para elaborar este proyecto.
+      </p>
+    </div>
+
+    <ol class="referencias">
+      <li>
+        Organización Mundial de la Salud. (2023).
+        <em>Estrés.</em>
+        <a href="https://www.who.int/es/news-room/questions-and-answers/item/stress"
+          target="_blank" rel="noopener noreferrer">
+          https://www.who.int/es/news-room/questions-and-answers/item/stress
+        </a>
+      </li>
+
+      <li>
+        Universidad Autónoma de Baja California. (s. f.).
+        <em>Directorio de orientadores educativos:
+        Tijuana.</em>
+        <a href="https://bienestar.uabc.mx/directorioOrientadores/tijuana"
+          target="_blank" rel="noopener noreferrer">
+          https://bienestar.uabc.mx/directorioOrientadores/tijuana
+        </a>
+      </li>
+
+      <li>
+        Universidad Autónoma de Baja California. (s. f.).
+        <em>Portal institucional.</em>
+        <a href="https://www.uabc.mx"
+          target="_blank" rel="noopener noreferrer">
+          https://www.uabc.mx
+        </a>
+      </li>
+
+      <li>
+        <em>Infografía: Manejo del estrés académico.</em>
+        (s. f.). Studocu.
+        <a href="https://www.studocu.com/es-mx/document/instituto-mexico-de-ciudad-juarez/psicologia-social/infografia-manejo-del-estres-academico-es/150590004"
+          target="_blank" rel="noopener noreferrer">
+          Consultar documento
+        </a>
+      </li>
+
+      <li>
+        <em>Video educativo proporcionado para el proyecto.</em>
+        (s. f.). YouTube.
+        <a href="https://youtu.be/ErwsvIqoRyI"
+          target="_blank" rel="noopener noreferrer">
+          https://youtu.be/ErwsvIqoRyI
+        </a>
+      </li>
+    </ol>
+
+    <p>
+      Nota: para completar las referencias APA 7
+      de Studocu y YouTube es necesario verificar
+      el autor, el título y la fecha de publicación
+      que aparecen en cada recurso.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <h3>Conecta UABC</h3>
+  <p>Aprender, organizarnos y cuidarnos.</p>
+  <p>
+    Proyecto académico informativo.
+    No representa un sitio oficial de la UABC.
+  </p>
+  <p>© 2026 Conecta UABC</p>
+</footer>
+
+<script>
+let segundos = 25 * 60;
+let intervalo = null;
+
+const reloj = document.getElementById("reloj");
+const estado = document.getElementById("estado");
+
+function mostrarTiempo() {
+  const minutos = Math.floor(segundos / 60);
+  const seg = segundos % 60;
+
+  reloj.textContent =
+    String(minutos).padStart(2, "0") +
+    ":" +
+    String(seg).padStart(2, "0");
+}
+
+function iniciar() {
+  if (intervalo !== null) return;
+
+  estado.textContent = "Tiempo de concentración";
+
+  intervalo = setInterval(() => {
+    if (segundos > 0) {
+      segundos--;
+      mostrarTiempo();
+    } else {
+      pausar();
+      estado.textContent = "¡Terminaste! Toma un descanso.";
+    }
+  }, 1000);
+}
+
+function pausar() {
+  clearInterval(intervalo);
+  intervalo = null;
+  if (segundos > 0) {
+    estado.textContent = "Temporizador pausado";
+  }
+}
+
+function reiniciar() {
+  pausar();
+  segundos = 25 * 60;
+  mostrarTiempo();
+  estado.textContent = "Listo para comenzar";
+}
+
+function descanso() {
+  pausar();
+  segundos = 5 * 60;
+  mostrarTiempo();
+  estado.textContent = "Descanso de 5 minutos";
+}
+
+mostrarTiempo();
+</script>
+
+</body>
+</html>
